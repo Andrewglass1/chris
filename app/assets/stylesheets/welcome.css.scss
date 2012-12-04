@@ -1,0 +1,12 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#songs           { list-style-type: none; }
+#whale-container { float: left; padding-top: 15px;}
+.songname        { height: 75px; margin-left: 10px;}
+#footer          { width: 700px; margin-left: 175px; margin-top: 60px;}
+#album           { margin-left: 100px; margin-bottom: 15px;}
+.mp3player       { display: none;}

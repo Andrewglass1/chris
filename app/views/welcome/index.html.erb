@@ -1,15 +1,16 @@
 <div id="container"> 
   <div id="whale-container">
-    <%= image_tag "whale.png", :width => "550px" %>
+    <%= image_tag "whale.png", :id => "whale-img" %>
   </div>
 
-  <div>
+  <div id="song-container">
     <%= image_tag "album.png", :width => "550px", :id => "album" %>
 
   <ul id="songs">
     <li>
       <a class="song" data-track="1" data-song="https://s3.amazonaws.com/personalsitesongs/01+A+Song+For+Our+Fathers.mp3" data-title="A Song For Our Fathers">
       <%= image_tag "play_button_black.png", :id => "1" %>
+      <%= image_tag "download.png" %>
       <%= image_tag "frog_pie.png", :class => "songname" %>
       </a>
     </li>

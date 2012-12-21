@@ -1,45 +1,68 @@
-<div id="container"> 
-  <div id="whale-container">
+<%= link_to "Download", "/assets/six.mp3", :target => "blank" %>
+<div id="container row-fluid show-grid"> 
+  <div id="whale-container" class="span5">
     <%= image_tag "whale.png", :id => "whale-img" %>
   </div>
 
-  <div id="song-container">
-    <%= image_tag "album.png", :width => "550px", :id => "album" %>
+  <div id="song-container" class="span7">
+    <%= image_tag "album.png", :id => "album" %>
 
   <ul id="songs">
     <li>
-      <a class="song" data-track="1" data-song="https://s3.amazonaws.com/personalsitesongs/01+A+Song+For+Our+Fathers.mp3" data-title="A Song For Our Fathers">
-      <%= image_tag "play_button_black.png", :id => "1" %>
-      <%= image_tag "download.png" %>
-      <%= image_tag "frog_pie.png", :class => "songname" %>
-      </a>
+      <%= link_to image_tag("play_button_black.png", :class => "play", :id => "1"),
+          "#", :class => "song", :data => {:track => "1",
+                                           :song => "/assets/songs/Frog_Pie.mp3"} %>
+
+      <%= link_to image_tag("download.png", :class => "download"), {:controller => "welcome", :action => "download", :song_name => "Frog_Pie" }%>
+
+      <%= link_to image_tag("frog_pie.png", :class => "songname", :id => "1"),
+          "#", :class => "song", :data => {:track => "1",
+                                           :song => "/assets/songs/Frog_Pie.mp3"} %>
     </li>
     <li>
-      <a class="song" data-track="2" data-song="https://s3.amazonaws.com/personalsitesongs/03+Tribulations.mp3" data-title="Tribulations">
-      <%= image_tag "play_button_black.png", :id => "2" %>
-      <%= image_tag "selfish.png", :class => "songname" %>
-      </a>
+      <%= link_to image_tag("play_button_black.png", :class => "play", :id => "2"),
+          "#", :class => "song", :data => {:track => "2",
+                                           :song => "/assets/songs/I_Know_This_Is_Selfish_But.mp3"} %>
+
+      <%= link_to image_tag("download.png", :class => "download"), {:controller => "welcome", :action => "download", :song_name => "I_Know_This_Is_Selfish_But" }%>
+
+      <%= link_to image_tag("selfish.png", :class => "songname", :id => "2"),
+          "#", :class => "song", :data => {:track => "2",
+                                           :song => "/assets/songs/I_Know_This_Is_Selfish_But.mp3"} %>
     </li>
     <li>
-      <a class="song" data-track="3" data-song="https://s3.amazonaws.com/personalsitesongs/05+Phoney+Phranchise+(Domino+Remix).mp3" data-title="Phoney Phranchise">
-        <%= image_tag "play_button_black.png", :id => "3" %>
-        <%= image_tag "recollection.png", :class => "songname" %>
-      </a>
+      <%= link_to image_tag("play_button_black.png", :class => "play", :id => "3"),
+          "#", :class => "song", :data => {:track => "3",
+                                           :song => "/assets/songs/Your_Recollection_Not_Mine.mp3"} %>
+
+      <%= link_to image_tag("download.png", :class => "download"), {:controller => "welcome", :action => "download", :song_name => "Your_Recollection_Not_Mine" }%>
+
+      <%= link_to image_tag("recollection.png", :class => "songname", :id => "3"),
+          "#", :class => "song", :data => {:track => "3",
+                                           :song => "/assets/songs/Your_Recollection_Not_Mine.mp3"} %>
     </li>
     <li>
-      <a class="song" data-track="4" data-song="https://s3.amazonaws.com/personalsitesongs/05+Phoney+Phranchise+(Domino+Remix).mp3" data-title="Phoney Phranchise">
-        <%= image_tag "play_button_black.png", :id => "4" %>
-        <%= image_tag "formal_leftovers.png", :class => "songname" %>
-      </a>
+      <%= link_to image_tag("play_button_black.png", :class => "play", :id => "4"),
+          "#", :class => "song", :data => {
+                                          :track => "4",
+                                          :song => "/assets/songs/Formal_Leftovers.mp3"} %>
+
+      <%= link_to image_tag("download.png", :class => "download"), {:controller => "welcome", :action => "download", :song_name => "Formal_Leftovers" }%>
+
+      <%= link_to image_tag("formal_leftovers.png", :class => "songname", :id => "4"),
+          "#", :class => "song", :data => {
+                                          :track => "4",
+                                          :song => "/assets/songs/Formal_Leftovers.mp3",
+                                          :title => "Phoney Phranchise"} %>
     </li>
   </ul>
   </div>
   <div id="footer">
-    <%= image_tag "credits.png", :id => "credits" %>
+    <%= image_tag "credits.png", :id =>"credits" %>
   </div>
 </div>
 
-  <audio class="mp3player" width="300" height="32" src="" controls="controls" data-current="" preload="auto" autoplay="false" autobuffer=""></audio>
+  <audio id="player" class="mp3player" width="300" height="32" src="" controls="controls" data-current="" preload="auto" autoplay="false" autobuffer=""></audio>
 
 <!-- <button onclick="document.getElementById('player').play()">Play</button>
  -->

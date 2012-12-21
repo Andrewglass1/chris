@@ -3,6 +3,7 @@ Chris::Application.routes.draw do
   resources :welcome, :only => [:index]
   root :to => 'welcome#index'
 
+  match 'welcome/download' => 'welcome#download', :as => :download
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

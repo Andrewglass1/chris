@@ -3,12 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+#whale-container { display: block; float: left; margin: 6% 0 0 6%; }
+#song-container  { display: block; float: left; margin: 10% 0 50px 12px;}
 
-#songs           { list-style-type: none; }
-#whale-container { float: left; display: inline; padding-top: 15px; width: 400px; }
-#whale-img       { width: 450px; margin-top: 75px; }
-#song-container  { width: 850px; display:inline; float: right;}
-.songname        { height: 65px; margin-left: 10px;}
-#footer          { width: 800px; margin-left: 175px; margin-top: 60px;}
-#album           { margin-left: 100px; margin-bottom: 15px;}
+#whale-img       { max-width: 450px; width: 100%;}
+
+#album           { max-height: 75px; margin: 20px auto 50px auto; display: block;}
+
+#songs           { list-style-type: none; float: left;}
+
+.songname        { max-height: 55px; width: 70%; margin-left: 10px; display: inline-block;}
+.play            { height: 55px; display: inline-block;}
+.download        { height: 55px; display: inline-block;} 
+
+#credits         { width: 70%; margin-left: auto; margin-right: auto; display: block;}
+
 .mp3player       { display: none;}

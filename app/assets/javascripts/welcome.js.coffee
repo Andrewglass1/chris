@@ -9,13 +9,17 @@ playlistHandler = ->
   totalTracks = $(".song").length
 
   $(".song").click ->
+    console.log($(this).attr('data-track'))
     if $(".mp3player").attr('data-current') == $(this).attr('data-track') && $(".mp3player")[0].paused == false
+      console.log("clicked current track playing.  it should pause")
       turnOffSongImage()
       pausePlayer()
     else if $(".mp3player").attr('data-current') == $(this).attr('data-track')
+      console.log("clicked current track playing.  it should unpause")
       turnOnSongImage($(this).attr('data-track'))
       unPausePlayer()
     else
+      console.log("clicked track not playing.  should start playing")
       turnOffSongImage()
       playSong($(this).attr('data-track'))
   
@@ -32,21 +36,24 @@ playlistHandler = ->
     title  = $("a[data-track=#{trackNumber}]").attr('data-title')
     $(".mp3player").attr('src', song)
     $(".mp3player").attr('data-current', track)
-    $(".mp3player").attr('autoplay', "true")
+    $(".mp3player")[0].play()
     turnOnSongImage(trackNumber)
     return false
 
   turnOffSongImage = ->
     trackNumber = $(".mp3player").attr('data-current')
-    $("img[id=#{trackNumber}]").attr('src', "/assets/play_button_black.png")
+    trackNumber ||= "boom"
+    $("img#" + trackNumber + ".play").attr('src', "/assets/play_button_black.png")
 
   turnOnSongImage = (trackNumber) ->
-    $("img[id=#{trackNumber}]").attr('src', "/assets/play_button_white.png")
+    $("img#" + trackNumber + ".play").attr('src', "/assets/play_button_white.png")
 
   pausePlayer = ->
-    $(".mp3player")[0].pause();
+    console.log("stoppin")
+    $(".mp3player")[0].pause()
 
   unPausePlayer = ->
-    $(".mp3player")[0].play();
+    console.log("playin")
+    $(".mp3player")[0].play()
 
 

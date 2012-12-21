@@ -3,12 +3,30 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+html {
+min-height: 100%;
+background: rgb(124,214,197); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(124,214,197,1) 0%, rgba(203,216,214,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(124,214,197,1)), color-stop(100%,rgba(203,216,214,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cd6c5', endColorstr='#cbd8d6',GradientType=0 ); /* IE6-9 */}
 
-#songs           { list-style-type: none; }
-#whale-container { float: left; display: inline; padding-top: 15px; width: 400px; }
-#whale-img       { width: 450px; margin-top: 75px; }
-#song-container  { width: 850px; display:inline; float: right;}
-.songname        { height: 65px; margin-left: 10px;}
-#footer          { width: 800px; margin-left: 175px; margin-top: 60px;}
-#album           { margin-left: 100px; margin-bottom: 15px;}
+#whale-container { display: block; float: left; margin: 15% 0 0 6%; }
+#song-container  { display: block; float: left; margin: 15% 0 50px 12px;}
+
+#whale-img       { max-width: 450px; width: 100%;}
+
+#album           { max-height: 120px; margin: 20px 0 20px 25px; display: block;}
+
+#songs           { list-style-type: none; float: left;}
+
+.songname        { max-height: 55px; width: 70%; margin-left: 10px; display: inline-block;}
+.play            { height: 55px; display: inline-block;}
+.download        { height: 55px; display: inline-block;} 
+
+#credits         { width: 70%; margin-left: auto; margin-right: auto; display: block;}
+
 .mp3player       { display: none;}

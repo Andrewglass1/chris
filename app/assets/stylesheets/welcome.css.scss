@@ -3,12 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+// body {background-color: #C1DAD6;}
+
+
+
+
+body {background-color: #C1DAD6;}
+// body {background-image: -radial-gradient(color-stops(#c00, #fff, #00c 50px));}
+
+
 #whale-container { display: block; float: left; margin: 6% 0 0 6%; }
-#song-container  { display: block; float: left; margin: 10% 0 50px 12px;}
+#song-container  { display: block; float: left; margin: 6% 0 50px 12px;}
 
 #whale-img       { max-width: 450px; width: 100%;}
 
-#album           { max-height: 75px; margin: 20px auto 50px auto; display: block;}
+#album           { max-height: 120px; margin: 20px 0 20px 25px; display: block;}
 
 #songs           { list-style-type: none; float: left;}
 

@@ -36,7 +36,7 @@ playlistHandler = ->
     title  = $("a[data-track=#{trackNumber}]").attr('data-title')
     $(".mp3player").attr('src', song)
     $(".mp3player").attr('data-current', track)
-    $(".mp3player").attr('autoplay', "true")
+    $(".mp3player")[0].play()
     turnOnSongImage(trackNumber)
     return false
 
@@ -50,10 +50,10 @@ playlistHandler = ->
 
   pausePlayer = ->
     console.log("stoppin")
-    $(".mp3player").trigger('stop');
+    $(".mp3player")[0].pause()
 
   unPausePlayer = ->
     console.log("playin")
-    $(".mp3player").trigger('play');
+    $(".mp3player")[0].play()
 
 

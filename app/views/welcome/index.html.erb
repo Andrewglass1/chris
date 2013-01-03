@@ -1,9 +1,9 @@
 <div id="container row-fluid show-grid"> 
-  <div id="whale-container" class="span5">
+  <div id="whale-container" >
     <%= image_tag "whale.png", :id => "whale-img" %>
   </div>
 
-  <div id="song-container" class="span7">
+  <div id="song-container" >
     <%= image_tag "album.png", :id => "album" %>
 
   <ul id="songs">
@@ -56,9 +56,6 @@
     </li>
   </ul>
   </div>
-<!--   <div id="footer">
-    <%#= image_tag "credits.png", :id =>"credits" %>
-  </div> -->
 </div>
 
   <audio id="player" class="mp3player" width="300" height="32" src="" controls="controls" data-current="" autobuffer=""></audio>

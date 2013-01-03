@@ -1,23 +1,19 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 html {
-min-height: 100%;
-background: rgb(124,214,197); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(124,214,197,1) 0%, rgba(203,216,214,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(124,214,197,1)), color-stop(100%,rgba(203,216,214,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cd6c5', endColorstr='#cbd8d6',GradientType=0 ); /* IE6-9 */}
+  min-height: 100%;
+  background: rgb(124,214,197); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(124,214,197,1) 0%, rgba(203,216,214,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(124,214,197,1)), color-stop(100%,rgba(203,216,214,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(124,214,197,1) 0%,rgba(203,216,214,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cd6c5', endColorstr='#cbd8d6',GradientType=0 ); /* IE6-9 */
+}
 
-#whale-container { display: block; float: left; margin: 15% 0 0 6%; }
-#song-container  { display: block; float: left; margin: 15% 0 50px 12px;}
+#whale-container { display: block; float: left; width: 50%; height: 100%; margin: 6% 0 0 6%; }
+#song-container  { display: block; float: left; width: 40%; height: 100%; margin: 14% 0 0px 0px;}
 
-#whale-img       { max-width: 450px; width: 100%;}
+#whale-img       { width: 100%;}
 
 #album           { max-height: 120px; margin: 20px 0 20px 25px; display: block;}
 

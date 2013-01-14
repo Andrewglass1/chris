@@ -10,23 +10,24 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cd6c5', endColorstr='#cbd8d6',GradientType=0 ); /* IE6-9 */
 }
 
-#whale-container { display: block; float: left; width: 25%; height: 100%; margin: 6% 0 0 6%; }
-#song-container  { display: block; float: left; width: 65%; height: 100%; margin: 9% 0 0px 0px;}
+#container  { margin: 0 auto;}
+#whale-container { display: block; float: left; width: 30%; height: 100%; padding: 6% 0 0 6%; }
+#song-container  { display: block; float: left; width: 60%; height: 100%; padding: 9% 0 0px 25px;}
 
 #whale-img       { width: 100%;}
 
 #album           { max-height: 148px; margin: 20px 0 20px 5px; display: block;}
 
-.song-images     {display: block;}
+.song-images     { display: block;}
 
 .play            { height: 55px;}
 .download        { height: 55px;}
-.songname        {   }
+.songname        { margin-bottom: 7px; position: relative; }
 
-.frog            { height: 60px; margin-left: 8px;}
-.selfish         { height: 65px; }
-.reco            { height: 65px; }
-.formal          { height: 60px; }
+.frog            { height: 60px; top: 8px; margin-left: 4px;}
+.selfish         { height: 65px; top: 12px; margin-left: 5px;}
+.reco            { height: 65px; top: 8px; margin-left: 4px;}
+.formal          { height: 60px; top: 8px; margin-left: 5px;}
 
 #credits         { width: 70%; margin-left: auto; margin-right: auto; display: block;}
 

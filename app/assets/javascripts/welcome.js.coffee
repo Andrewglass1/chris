@@ -35,6 +35,8 @@ playlistHandler = ->
     track  = $("a[data-track=#{trackNumber}]").attr('data-track')
     title  = $("a[data-track=#{trackNumber}]").attr('data-title')
     $(".mp3player").attr('src', song + browserFormat() )
+    alert("playing format: " + browserFormat())
+    browserFormatLogger()
     $(".mp3player").attr('data-current', track)
     $(".mp3player")[0].play()
     turnOnSongImage(trackNumber)
@@ -64,3 +66,10 @@ playlistHandler = ->
       return ".mp3" if canPlayMp3
       return ".ogg" if canPlayOgg
 
+  browserFormatLogger= ->
+    myAudio = document.createElement('audio'); 
+    if myAudio.canPlayType
+      canPlayMp3 = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/mpeg');
+      canPlayOgg = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/ogg; codecs="vorbis"');
+      alert("can play mp3? " + canPlayMp3)
+      alert("can play ogg? " + canPlayOgg)

@@ -10,19 +10,38 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cd6c5', endColorstr='#cbd8d6',GradientType=0 ); /* IE6-9 */
 }
 
-#whale-container { display: block; float: left; width: 50%; height: 100%; margin: 6% 0 0 6%; }
-#song-container  { display: block; float: left; width: 40%; height: 100%; margin: 14% 0 0px 0px;}
+#whale-container { display: block; float: left; width: 25%; height: 100%; margin: 6% 0 0 6%; }
+#song-container  { display: block; float: left; width: 65%; height: 100%; margin: 14% 0 0px 0px;}
 
 #whale-img       { width: 100%;}
 
-#album           { max-height: 120px; margin: 20px 0 20px 25px; display: block;}
+#album           { max-height: 148px; margin: 20px 0 20px 5px; display: block;}
 
-#songs           { list-style-type: none; float: left;}
+.song-images     {display: block;}
 
-.songname        { max-height: 55px; width: 70%; margin-left: 10px; display: inline-block;}
-.play            { height: 55px; display: inline-block;}
-.download        { height: 55px; display: inline-block;} 
+.play            { height: 55px;}
+.download        { height: 55px;}
+.songname        {   }
+
+.frog            { height: 60px; margin-left: 8px;}
+.selfish         { height: 65px; }
+.reco            { height: 65px; }
+.formal          { height: 60px; }
 
 #credits         { width: 70%; margin-left: auto; margin-right: auto; display: block;}
 
 .mp3player       { display: none;}
+
+/*.songname1 {
+height: 70px;
+margin-left: 14px;
+}
+.songname2 {
+height: 61px;
+}
+.songname3 {
+height: 63px;
+}
+.songname4 {
+height: 56px;
+}*/

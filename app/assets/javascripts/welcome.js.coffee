@@ -70,5 +70,5 @@ playlistHandler = ->
       canPlayMp3 = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/mpeg');
       canPlayOgg = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/ogg; codecs="vorbis"');
       alert("can play mp3? " + canPlayMp3)
-      alert("can play ogg? " + canPlayOgg
+      alert("can play ogg? " + canPlayOgg)
       alert("playing format: " + browserFormat())

@@ -10,25 +10,25 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cd6c5', endColorstr='#cbd8d6',GradientType=0 ); /* IE6-9 */
 }
 
-#container  { margin: 0 0% 0 8%;}
-#whale-container { float: left; width: 30%; height: 100%; padding: 16% 0 10% 0%; }
-#song-container  { float: left; width: 61%; height: 100%; padding: 7% 0 10% 0%; margin-left: 15px;}
+#container       { margin: 0 7% 0 7%;}
+#whale-container { float: left; width: 50%; height: 100%; margin: 12% 0 0% 0%; }
+#song-container  { float: left; width: 50%; height: 100%; margin: 12% 0 0% 0%; }
 
-/*#whale-img       { miwidth: 385px;}
-*/
+#whale-img       { width: 100%;}
+
 #album           { max-height: 120px; margin: 20px 0 12px 5px; display: block;}
 
 
 .song-images     { display: block;}
 
-.play            { height: 50px;}
-.download        { height: 50px;}
+.play            { max-height: 50px; max-width: 50px;}
+.download        { max-height: 50px; max-width: 50px;}
 .songname        { margin-bottom: 7px; position: relative; }
 
-.frog            { height: 50px; top: 6px; margin-left: 4px;}
-.selfish         { height: 52px; top: 7px; margin-left: 5px;}
-.reco            { height: 52px; top: 5px; margin-left: 4px;}
-.formal          { height: 48px; top: 5px; margin-left: 5px;}
+.frog            { max-height: 50px; max-width: 400px; top: 6px; margin-left: 4px;}
+.selfish         { max-height: 52px; max-width: 400px; top: 7px; margin-left: 5px;}
+.reco            { max-height: 52px; max-width: 400px; top: 5px; margin-left: 4px;}
+.formal          { max-height: 48px; max-width: 400px; top: 5px; margin-left: 5px;}
 
 #credits         { width: 70%; margin-left: auto; margin-right: auto; display: block;}
 

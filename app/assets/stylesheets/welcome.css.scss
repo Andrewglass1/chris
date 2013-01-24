@@ -1,5 +1,7 @@
-html {
-  min-height: 100%;
+html { height: 100%;}
+
+body {
+  height: 100%;
   background: rgb(124,214,197); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(124,214,197,1) 0%, rgba(203,216,214,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(124,214,197,1)), color-stop(100%,rgba(203,216,214,1))); /* Chrome,Safari4+ */
@@ -10,26 +12,32 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cd6c5', endColorstr='#cbd8d6',GradientType=0 ); /* IE6-9 */
 }
 
-#container       { margin: 0 7% 0 7%;}
-#whale-container { float: left; width: 50%; height: 100%; margin: 12% 0 0% 0%; }
-#song-container  { float: left; width: 50%; height: 100%; margin: 12% 0 0% 0%; }
-
-#whale-img       { width: 100%;}
+#container       { width: 70%; margin: auto; padding-top: 75px;}
+#whale-container { display: inline-block; vertical-align: top; width: 46%;}
+#song-container  { display: inline-block; vertical-align: top; width: 53%;}
 
 #album           { max-height: 120px; margin: 20px 0 12px 5px; display: block;}
 
 
 .song-images     { display: block;}
 
-.play            { max-height: 50px; max-width: 50px;}
-.download        { max-height: 50px; max-width: 50px;}
-.songname        { margin-bottom: 7px; position: relative; }
+/* images */
+.play            { width: 100%;}
+.download        { width: 100%;}
+.songname        { }
 
-.frog            { max-height: 50px; max-width: 400px; top: 6px; margin-left: 4px;}
-.selfish         { max-height: 52px; max-width: 400px; top: 7px; margin-left: 5px;}
-.reco            { max-height: 52px; max-width: 400px; top: 5px; margin-left: 4px;}
-.formal          { max-height: 48px; max-width: 400px; top: 5px; margin-left: 5px;}
+.frog           { width: 100%; }
+.selfish        { width: 100%; }
+.reco           { width: 100%; }
+.formal         { width: 100%; }
 
-#credits         { width: 70%; margin-left: auto; margin-right: auto; display: block;}
+/* links */
+.play-link       { width: 8%; display:inline-block;}
+.download-link   { width: 8%; display:inline-block;}
+.song-name-link  { width: 75%; display:inline-block;}
+
+
+.credits-div     { display: block; width: 600px; margin: auto;}
+.credits         { }
 
 .mp3player       { display: none;}

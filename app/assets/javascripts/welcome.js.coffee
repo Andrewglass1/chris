@@ -42,7 +42,7 @@ playlistHandler = ->
       $(".mp3player").attr('data-current', track)
       turnOnSongImage(trackNumber)
     catch error
-      alert("error!")
+      alert("Html5 audio not supported on your browser. Please upgrade or try another browser.")
     return false
 
   turnOffSongImage = ->

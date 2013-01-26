@@ -10,6 +10,7 @@ playlistHandler = ->
   audioElement = document.createElement('audio')
 
   $(".song").click ->
+    browserFormatLogger()
     console.log($(this).attr('data-track'))
     if $(".mp3player").attr('data-current') == $(this).attr('data-track') && audioElement.paused == false
       console.log("clicked current track playing.  it should pause")
@@ -34,11 +35,14 @@ playlistHandler = ->
   playSong = (trackNumber) ->
     song   = $("a[data-track=#{trackNumber}]").attr('data-song')
     track  = $("a[data-track=#{trackNumber}]").attr('data-track')
-    audioElement.setAttribute('src', song + browserFormat())
-    audioElement.load()
-    audioElement.play()
-    $(".mp3player").attr('data-current', track)
-    turnOnSongImage(trackNumber)
+    try
+      audioElement.setAttribute('src', song + browserFormat())
+      audioElement.load()
+      audioElement.play()
+      $(".mp3player").attr('data-current', track)
+      turnOnSongImage(trackNumber)
+    catch error
+      alert("error!")
     return false
 
   turnOffSongImage = ->
@@ -58,19 +62,16 @@ playlistHandler = ->
     audioElement.play()
 
   browserFormat= ->
-    browserFormatLogger
     if audioElement.canPlayType
       canPlayMp3 = !!audioElement.canPlayType && "" != audioElement.canPlayType('audio/mpeg');
       canPlayOgg = !!audioElement.canPlayType && "" != audioElement.canPlayType('audio/ogg; codecs="vorbis"');
-      if !canPlayMp3 && !canPlayOgg
-        alert("html5 audio is not supported in your browser.  please up")
       return ".mp3" if canPlayMp3
       return ".ogg" if canPlayOgg
 
   browserFormatLogger= ->
     if audioElement.canPlayType
-      canPlayMp3 = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/mpeg');
-      canPlayOgg = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/ogg; codecs="vorbis"');
+      canPlayMp3 = !!audioElement.canPlayType && "" != audioElement.canPlayType('audio/mpeg');
+      canPlayOgg = !!audioElement.canPlayType && "" != audioElement.canPlayType('audio/ogg; codecs="vorbis"');
       console.log("can play mp3? result:" + canPlayMp3)
       console.log("can play ogg? result:" + canPlayOgg)
       console.log("playing format: " + browserFormat())

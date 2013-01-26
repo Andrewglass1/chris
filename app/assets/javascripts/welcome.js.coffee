@@ -58,6 +58,7 @@ playlistHandler = ->
     audioElement.play()
 
   browserFormat= ->
+    browserFormatLogger
     if audioElement.canPlayType
       canPlayMp3 = !!audioElement.canPlayType && "" != audioElement.canPlayType('audio/mpeg');
       canPlayOgg = !!audioElement.canPlayType && "" != audioElement.canPlayType('audio/ogg; codecs="vorbis"');
@@ -70,6 +71,9 @@ playlistHandler = ->
     if audioElement.canPlayType
       canPlayMp3 = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/mpeg');
       canPlayOgg = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/ogg; codecs="vorbis"');
-      alert("can play mp3? " + canPlayMp3)
-      alert("can play ogg? " + canPlayOgg)
-      alert("playing format: " + browserFormat())
+      console.log("can play mp3? result:" + canPlayMp3)
+      console.log("can play ogg? result:" + canPlayOgg)
+      console.log("playing format: " + browserFormat())
+    else
+      console.log("canPlayType evaluator failed")
+

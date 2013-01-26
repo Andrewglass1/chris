@@ -35,8 +35,9 @@ playlistHandler = ->
     song   = $("a[data-track=#{trackNumber}]").attr('data-song')
     track  = $("a[data-track=#{trackNumber}]").attr('data-track')
     audioElement.setAttribute('src', song + browserFormat())
-    $(".mp3player").attr('data-current', track)
+    audioElement.load()
     audioElement.play()
+    $(".mp3player").attr('data-current', track)
     turnOnSongImage(trackNumber)
     return false
 

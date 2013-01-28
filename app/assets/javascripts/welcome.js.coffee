@@ -10,18 +10,17 @@ playlistHandler = ->
   audioElement = document.createElement('audio')
 
   $(".song").click ->
-    browserFormatLogger()
-    console.log($(this).attr('data-track'))
+    # console.log($(this).attr('data-track'))
     if $(".mp3player").attr('data-current') == $(this).attr('data-track') && audioElement.paused == false
       console.log("clicked current track playing.  it should pause")
       turnOffSongImage()
       pausePlayer()
     else if $(".mp3player").attr('data-current') == $(this).attr('data-track')
-      console.log("clicked current track playing.  it should unpause")
+      # console.log("clicked current track playing.  it should unpause")
       turnOnSongImage($(this).attr('data-track'))
       unPausePlayer()
     else
-      console.log("clicked track not playing.  should start playing")
+      # console.log("clicked track not playing.  should start playing")
       turnOffSongImage()
       playSong($(this).attr('data-track'))
   
@@ -54,11 +53,11 @@ playlistHandler = ->
     $("img#" + trackNumber + ".play").attr('src', "/assets/play_button_white.png")
 
   pausePlayer = ->
-    console.log("stoppin")
+    # console.log("stoppin")
     audioElement.pause()
 
   unPausePlayer = ->
-    console.log("playin")
+    # console.log("playin")
     audioElement.play()
 
   browserFormat= ->
